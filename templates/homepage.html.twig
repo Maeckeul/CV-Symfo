@@ -2,6 +2,162 @@
 
 {% block body %}
 
-<h1>Bienvenue</h1>
+
+
+<div class="i">
+    <div class="i-left">
+      <div class="i-left-wrapper">
+        <h2 class="i-intro">Je m'appelle</h2>
+        <h2 class="i-name">{{ identity.name }}</h2>
+        <div class="i-title">
+          <div class="i-title-wrapper">
+            <div class="i-title-item">{{ identity.statut }}</div>
+            <div class="i-title-item">Disponible</div>
+            <div class="i-title-item">Vive le code !</div>
+            <div class="i-title-item">♥ Prox-i !</div>
+          </div>
+        </div>
+        <p class="i-desc">
+          Les programmes doivent être faits pour être lus par des gens, et occasionnellement pour être exécutés par des machines.
+― Hal Abelson
+        </p>
+      </div>
+      <svg
+        width="75"
+        height="75"
+        viewBox="0 0 75 75"
+        fill="none"
+        stroke="black"
+        class="i-scroll"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="scroll">
+          <path
+            id="Vector"
+            d="M40.5 15L34.5 9L28.5 15"
+            stroke-width="3"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            id="Vector_2"
+            d="M28.5 24L34.5 30L40.5 24"
+            stroke-width="3"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <g id="Group">
+            <path
+              id="Vector_3"
+              d="M9 37.5H60"
+              stroke-width="3"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+          <path
+            id="Vector_4"
+            d="M34.5 27V9"
+            stroke-width="2.9895"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <g id="Group_2">
+            <path
+              id="Vector_5"
+              d="M9 27C9 12.918 20.418 1.5 34.5 1.5C48.5859 1.5 60 12.918 60 27C60 29.8906 60 45.1094 60 48C60 62.082 48.5859 73.5 34.5 73.5C20.418 73.5 9 62.082 9 48C9 45.1094 9 29.8906 9 27Z"
+              stroke-width="3"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="i-right">
+      <div class="i-bg"></div>
+      <img src="{{ asset('images/me.png') }}" class="i-img">
+    </div>
+  </div>
+  <div class="a">
+    <div class="a-left">
+      <div class="a-card bg"></div>
+      <div class="a-card">
+        <img
+          src="{{ asset('images/code.jpg') }}"
+          alt=""
+          class="a-img"
+        />
+      </div>
+    </div>
+    <div class="a-right">
+      <h1 class="a-title">Contactez moi...</h1>
+      <ul class="a-ul">
+        <li class="a-li">
+          <img class="a-logo" src="{{ asset('images/phone.png') }}">
+          <a class="a-sub" href="tel:+68989612176">
+            {{ identity.phone }}
+          </a>
+        </li>
+        <li class="a-li">
+          <img class="a-logo" src="{{ asset('images/email.png') }}">
+          <a class="a-sub" href="mailto:contact@web-iti.com">
+            {{ identity.mail }}
+          </a>
+        </li>
+        <li class="a-li">
+          <img class="a-logo" src="{{ asset('images/address.png') }}">
+          <p class="a-sub">
+            {{ identity.address }}
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="pl">
+    <div class="pl-texts">
+      <h1 class="pl-title">Venez découvrir qui je suis !</h1>
+      <p class="pl-desc">
+        N'hésitez pas à naviguer sur mon site web pour découvrir mes projets en cours, sur ma page Linkedin qui retranscrit mon parcours et sur ma page Github qui répertorie mes différents travaux jusqu'à ce jour.
+      </p>
+    </div>
+    <div class="pl-list">
+      <div class="p">
+        <div class="p-browser">
+          <div class="p-circle"></div>
+          <div class="p-circle"></div>
+          <div class="p-circle"></div>
+        </div>
+        <a href="{{ identity.websiteProfile }}" target="_blank" rel="noreferrer">
+          <img src="{{ asset('images/web-iti.png') }}" alt="" class="p-img" />
+        </a>
+      </div>
+      <div class="p">
+        <div class="p-browser">
+          <div class="p-circle"></div>
+          <div class="p-circle"></div>
+          <div class="p-circle"></div>
+        </div>
+        <a href="{{ identity.linkedinProfile }}"target="_blank" rel="noreferrer">
+          <img src="{{ asset('images/linkedin.png') }}" alt="" class="p-img" />
+        </a>
+      </div>
+      <div class="p">
+        <div class="p-browser">
+          <div class="p-circle"></div>
+          <div class="p-circle"></div>
+          <div class="p-circle"></div>
+        </div>
+        <a href="{{ identity.githubProfile }}" target="_blank" rel="noreferrer">
+          <img src="{{ asset('images/github.png') }}" alt="" class="p-img" />
+        </a>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}

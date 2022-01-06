@@ -45,11 +45,27 @@
   }
   
   .a-title {
-    font-weight: 400;
+    font-weight: 600;
   }
-  
-  .a-sub {
-    margin: 20px 0px;
+
+  a.a-sub:hover {
+    color: $blue; 
+    transition: 0.5s;
+  }
+
+  .a-logo {
+    width: 50px;
+    margin-right: 20px;
+  }
+
+  .a-ul {
+    margin-top: 50px;
+  }
+
+  .a-li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
   }
   
   .a-desc{
